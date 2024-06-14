@@ -2,7 +2,7 @@ var device_status_element = document.getElementById("device-status")
 var button_ids =  []
 
 
-fetch ("dummy/devices.json").then((response) => {
+fetch ("/devices.json").then((response) => {
   return response.json()
 }).then((data) => {
   let device_container = document.getElementById("device-list")
@@ -76,7 +76,8 @@ function btn_flip (element) {
       }
     }
 
-  }).catch(() => {
+  }).catch((err) => {
+    console.error(err)
     failure_handler(doc, pin_status)
   })
 
