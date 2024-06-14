@@ -2,7 +2,7 @@ var device_status_element = document.getElementById("device-status")
 var button_ids =  []
 
 
-fetch ("/devices.json").then((response) => {
+fetch ("/devices").then((response) => {
   return response.json()
 }).then((data) => {
   let device_container = document.getElementById("device-list")
@@ -18,8 +18,8 @@ fetch ("/devices.json").then((response) => {
       device_children_container.classList.add("device-child-container")
 
       device_children_name.textContent = device.name
-      device_children_button.textContent = device.high ? "ON" : "OFF"
-      device_children_button.setAttribute("data-status", device.high ? "on" : "off")
+      device_children_button.textContent = device.high ? "OFF" : "ON"
+      device_children_button.setAttribute("data-status", device.high ? "off" : "on")
       device_children_button.setAttribute("data-pin", device.pin)
       let id = `${device.pin}-${index}`
       device_children_button.setAttribute("id", id)
@@ -48,21 +48,22 @@ function btn_flip (element) {
   let doc = document.getElementById(element.srcElement.id)
   let pin = doc.getAttribute("data-pin")
   let pin_status = doc.getAttribute("data-status")
-
-  if (doc.textContent == "WAITING") {
+  
+  /*if (doc.textContent == "WAITING") {
 
     return false
   }
 
-  doc.textContent = "WAITING"
+  doc.textContent = "WAITING"*/
 
+  
   fetch(`/flipstatus?pin=${pin}`).then(response => {
     if (!response.ok) {
       failure_handler(doc, pin_status)
 
     }
 
-    return json.response()
+    return response.json()
   }).then(data => {
     if (data.error) {
       failure_handler(doc, pin_status)
