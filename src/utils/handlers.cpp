@@ -1,5 +1,5 @@
 #include "handlers.h"
-
+#include "server.h"
 void stylesheet() {
   server.send(200, "text/css", R"rawliteral(:root{--background:#242424;--text:#ffffff;--primary:#242424;--secondary:#424242;--tertiary:#303030}body{font-family:sans-serif;color:var(--text);background-color:var(--background)}nav p{width:fit-content;padding:1vh 3vw;border-radius:10px;background-color:var(--secondary)}button{transition:all 300ms ease;background-color:var(--secondary);color:var(--text);width:20vw;height:5vh;max-height:40px;border:none;border-radius:10px}button[data-status="off"]{border:none}button[data-status="on"]{box-shadow:0 0 5px #fff}.device-child-container{transition:all 300ms ease;text-align:center;display:block;flex-grow:0;flex-shrink:1;flex-basis:auto;align-self:auto;order:0;border:solid 1px #fff0;border-radius:10px;padding:20px;width:30vw;max-height:20vh;background-color:var(--tertiary);box-shadow:0 0 10px #000}.device-child-container:hover{box-shadow:0 0 25px #000}.devices{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:normal;align-items:normal;align-content:flex-start;gap:10px})rawliteral");
 }

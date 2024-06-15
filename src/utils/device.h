@@ -6,7 +6,7 @@
 extern ESP8266WebServer server;
 
 void device_handler();
-void register_device(String name, uint8_t pin);
+void register_device(char* name, int pin);
 
 
 

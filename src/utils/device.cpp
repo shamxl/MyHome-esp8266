@@ -4,7 +4,7 @@
 JsonDocument jsdoc;
 JsonArray Devices = jsdoc.createNestedArray("devices");
 
-void register_device (String name, uint8_t pin) {
+void register_device (char* name, int pin) {
   pinMode(pin, OUTPUT);
   digitalWrite(pin, HIGH);
   JsonObject device = Devices.createNestedObject();

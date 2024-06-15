@@ -1,5 +1,7 @@
 a simple esp8266 gpio manager with web ui support
 
-==note==
+==installation==
 
-not finished, need to convert it into a library.
+download zip file from the release page and import it to your arduino studio
+
+some examples are available in the examples/ dir
