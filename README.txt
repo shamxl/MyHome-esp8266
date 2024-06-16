@@ -11,5 +11,5 @@ a simple esp8266 gpio manager with web ui support
 
 == note ==
 
-- use the default branch for the stable version
+- MyHome is still in beta, if you encounter any error please create an issue
 
