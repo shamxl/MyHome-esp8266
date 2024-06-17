@@ -1,5 +1,5 @@
 #include "handlers.h"
-#include "server.h"
+#include "../server/server.h"
 void stylesheet() {
   server.send(200, "text/css", R"rawliteral(button,nav p{background-color:var(--secondary)}body,button{color:var(--text)}:root{--background:#F7FAFD;--text:#000000;--primary:#dcdcdc;--secondary:#CBEBFE;--tertiary:#6F787F;--shadow:#6F787F;--border:#6F787F}@media(prefers-color-scheme:dark){:root{--background:#242424;--text:#ffffff;--primary:#242424;--secondary:#424242;--tertiary:#303030;--shadow:white;--border:#C4C4C4}}body{font-family:sans-serif;background-color:var(--background)}nav p{width:fit-content;padding:1vh 3vw;border-radius:10px}button{transition:.3s;width:20vw;height:5vh;max-height:40px;max-width:150px;border:none;border-radius:50px;font-weight:700}button[data-status=off]{border:none}button[data-status=on]{box-shadow:0 0 5px var(--shadow)}.device-child-container{transition:.3s;text-align:center;display:block;flex-grow:0;flex-shrink:1;flex-basis:auto;align-self:auto;order:0;border:solid 1px var(--border);border-radius:10px;padding:20px;width:30vw;max-height:20vh;background-color:transparent}.devices{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:normal;align-items:normal;align-content:flex-start;gap:10px})rawliteral");
 }

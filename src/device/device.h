@@ -9,5 +9,4 @@ void device_handler();
 void register_device(char* name, int pin);
 
 
-
 #endif

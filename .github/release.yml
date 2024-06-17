@@ -1,0 +1,22 @@
+changelog:
+  exclude:
+    labels:
+      - ignore
+
+  categories:
+    - title: New features 🌁
+      labels:
+        - Added
+        - New-Feature
+
+    - title: Fixed bugs 🏗️
+      labels:
+        - Fixed
+    
+    - title: Breaking changes 🏚️
+      labels:
+        - breaking
+
+    - title: Other
+      labels:
+        - "*"
