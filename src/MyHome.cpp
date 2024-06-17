@@ -1,7 +1,7 @@
 #include "MyHome.h"
-#include "utils/device.h"
-#include "utils/server.h"
-#include "utils/handlers.h"
+#include "device/device.h"
+#include "server/server.h"
+#include "handlers/handlers.h"
 
 
 void MyHome::register_pin(char* name, int pin) {
